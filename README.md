@@ -5,7 +5,7 @@
 2. Muhammad Rafi' Adly (5027241082)
 
 ## Soal 1
-Menggunakan GNS3 Web UI dengan IP Address Host-nya 10.15.43.32. Membuat project dengan Eru sebagai Router-nya yang terhubung ke internet(NAT1), juga terhubung ke 2 gateway/switch. Yang gateway masing-masing tersebut terhubung ke 2 client seperti pada gambar.
+Menggunakan GNS3 Web UI dengan IP Address Host-nya 10.15.43.32. Membuat project dengan Eru sebagai Router-nya yang terhubung ke internet(NAT1), juga terhubung ke 2 gateway/switch. Dimana masing-masing gateway tersebut terhubung ke 2 client seperti pada gambar.
 <img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/393ae44f-f9f8-4ca4-9358-905033c31d38" />
 
 ## Soal 2
