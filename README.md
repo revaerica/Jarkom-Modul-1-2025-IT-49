@@ -32,7 +32,7 @@ IP Gateway untuk Switch 1 adalah 10.88.1.1, Switch 2 adalah 10.88.2.1. Kemudian 
 
 - Switch 1
 
-Client Melkor dengan IP Address 10.88.1.2.
+Client **Melkor** dengan IP Address 10.88.1.2.
 ```
 auto eth0
 iface eth0 inet static
@@ -40,7 +40,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.88.1.1
 ```
-Client Manwe dengan IP Address 10.88.1.3.
+Client **Manwe** dengan IP Address 10.88.1.3.
 ```
 auto eth0
 iface eth0 inet static
@@ -51,7 +51,7 @@ iface eth0 inet static
 
 - Switch 2
 
-Client Varda dengan IP Address 10.88.2.2.
+Client **Varda** dengan IP Address 10.88.2.2.
 ```
 auto eth0
 iface eth0 inet static
@@ -59,7 +59,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.88.2.1
 ```
-Client Ulmo dengan IP Address 10.88.2.3.
+Client **Ulmo** dengan IP Address 10.88.2.3.
 ```
 auto eth0
 iface eth0 inet static
@@ -71,9 +71,12 @@ iface eth0 inet static
 ## Soal 4
 Agar semua client dapat terhubung ke internet, pertama-tama menginstall `iptables` dan menjalankan command `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.88.0.0/16` pada router Eru.
 <img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/2b1c2fcf-690e-46c2-a690-129d73329dad" />
+
 Kemudian menyesuaikan file resolv.conf pada directory setiap client agar memiliki DNS yang sama seperti Router Eru.
 <img width="494" height="50" alt="image" src="https://github.com/user-attachments/assets/f2e03673-73f8-4bf6-a102-0e62a8ca0a57" />
+
 Dengan menjalankan command `echo nameserver 192.168.122.1 > /etc/resolv.conf` pada setiap client. Berikut adalah salah satu node client yang sudah bisa melakukan ping pada google.
+
 <img width="1291" height="354" alt="image" src="https://github.com/user-attachments/assets/d781a2d3-8b1b-4089-bf78-24b597e534cb" />
 
 ## Soal 5
