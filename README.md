@@ -29,8 +29,8 @@ iface eth2 inet static
 	netmask 255.255.255.0
 ```
 IP Gateway untuk Switch 1 adalah 10.88.1.1, Switch 2 adalah 10.88.2.1. Kemudian setiap client memiliki IP Statis dan konfigurasinya sebagai berikut.
-**- Switch 1**
 
+- Switch 1
 
 Client Melkor dengan IP Address 10.88.1.2.
 ```
@@ -48,8 +48,8 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.88.1.1
 ```
-**- Switch 2**
 
+- Switch 2
 
 Client Varda dengan IP Address 10.88.2.2.
 ```
