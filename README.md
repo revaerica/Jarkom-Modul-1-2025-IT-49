@@ -70,6 +70,7 @@ iface eth0 inet static
 
 ## Soal 4
 Agar semua client dapat terhubung ke internet, pertama-tama menginstall `iptables` dan menjalankan command `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.88.0.0/16` pada router Eru.
+
 <img width="1920" height="1128" alt="image" src="https://github.com/user-attachments/assets/2b1c2fcf-690e-46c2-a690-129d73329dad" />
 
 Kemudian menyesuaikan file resolv.conf pada directory setiap client agar memiliki DNS yang sama seperti Router Eru.
