@@ -82,3 +82,13 @@ Dengan menjalankan command `echo nameserver 192.168.122.1 > /etc/resolv.conf` pa
 
 ## Soal 5
 Pada konfigurasi Eru ditambahkan startup script `up apt update && apt install iptables && iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.88.0.0/16`. Dan setiap dari konfigurasi client ditambahkan `up echo nameserver 192.168.122.1 > /etc/resolv.conf` untuk startup script-nya.
+
+## Soal 6
+
+## Soal 7
+
+## Soal 8
+
+## Soal 9
+
+## Soal 10
