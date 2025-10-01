@@ -87,6 +87,14 @@ Pada konfigurasi Eru ditambahkan startup script `up apt update && apt install ip
 
 ## Soal 6
 
+<img width="863" height="470" alt="image" src="https://github.com/user-attachments/assets/054e4b7b-a9af-4d0b-b6d8-d17939a03841" />
+
+Kita dapat melakukan start capture dan menjalankan ` ./traffic.sh` dan melakukan ping ke IP Eru (10.88.1.1)
+<img width="959" height="410" alt="image" src="https://github.com/user-attachments/assets/c6289e17-83b0-454b-874c-c361e0e69bc8" />
+
+Lalu kita filter dengan IP Manwe (10.88.1.3) dan IP Eru (10.88.1.1) dan export file yang menampilkan semua paket yang berasal dari atau menuju ke IP Address Manwe.
+<img width="732" height="440" alt="image" src="https://github.com/user-attachments/assets/0be235ee-f624-499f-83d2-67d77d94bd32" />
+
 ## Soal 7
 
 ## Soal 8
