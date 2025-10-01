@@ -27,6 +27,8 @@ auto eth2
 iface eth2 inet static
 	address 10.88.2.1
 	netmask 255.255.255.0
+
+up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.88.0.0/16
 ```
 IP Gateway untuk Switch 1 adalah 10.88.1.1, Switch 2 adalah 10.88.2.1. Kemudian setiap client memiliki IP Statis dan konfigurasinya sebagai berikut.
 
