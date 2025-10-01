@@ -99,6 +99,10 @@ Lalu kita filter dengan IP Manwe (10.88.1.3) dan IP Eru (10.88.1.1) dan export f
 
 ## Soal 7
 
+<img width="959" height="179" alt="image" src="https://github.com/user-attachments/assets/55bfe486-0b88-4090-9fb9-0a4645c2df3d" />
+
+Ubah konfigurasi vsftpd
+
 ## Soal 8
 
 ## Soal 9
