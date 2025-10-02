@@ -1,10 +1,10 @@
-## 1. Direktori FTP
+# 1. Direktori FTP
 mkdir -p /srv/ftp/shared
 chown ainur:ainur /srv/ftp/shared
 chmod 755 /srv/ftp/shared
-- /srv/ftp/shared untuk Ainur read/write
+# /srv/ftp/shared untuk Ainur read/write
 
-## 2. User Setup
+# 2. User Setup
 # Ainur (bisa read/write)
 usermod -s /bin/bash ainur
 passwd ainur
@@ -13,7 +13,7 @@ passwd ainur
 usermod -s /bin/bash melkor
 passwd melkor
 
-## 3. vsftpd Main Config (`/etc/vsftpd.conf`)
+# 3. vsftpd Main Config (`/etc/vsftpd.conf`)
 listen=YES
 listen_ipv6=NO
 anonymous_enable=NO
@@ -36,36 +36,36 @@ ssl_enable=NO
 
 user_config_dir=/etc/vsftpd_user_conf
 
-## 4. Per-User Config
+# 4. Per-User Config
 
-### Ainur (`/etc/vsftpd_user_conf/ainur`)
+# Ainur (`/etc/vsftpd_user_conf/ainur`)
 write_enable=YES
-local_root=/srv/ftp/shared
+local_root=/srv/ftp
 
-### Melkor (`/etc/vsftpd_user_conf/melkor`)
+# Melkor (`/etc/vsftpd_user_conf/melkor`)
 write_enable=NO
 local_root=/home/melkor
-- Pastikan direktori /home/melkor ada:
+# Pastikan direktori /home/melkor ada:
 mkdir -p /home/melkor
 chown melkor:melkor /home/melkor
 chmod 700 /home/melkor
 
-## 5. File Bukti Akses Ainur
+# 5. File Bukti Akses Ainur
 echo "Ini bukti akses FTP Ainur" > /srv/ftp/shared/proof.txt
 chown ainur:ainur /srv/ftp/shared/proof.txt
 chmod 644 /srv/ftp/shared/proof.txt
 
-## 6. Restart vsftpd
+# 6. Restart vsftpd
 service vsftpd restart
 
-### Ainur
+# Ainur
 ftp localhost
 ls
 get proof.txt
 put proof.txt
 # Bisa read & write.
 
-### Melkor
+# Melkor
 ftp localhost
 ls /srv/ftp/shared 
 get /srv/ftp/shared/proof.txt  
