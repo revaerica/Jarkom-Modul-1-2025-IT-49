@@ -145,5 +145,24 @@ flag `KOMJAR25{Brut3_F0rc3_gMmmf2sGnd9gbyg5zth5QYTqZ}`
 ## Soal 15
 Kita jalankan `nc 10.15.43.32 3402` dan buka file yang telah disediakan di Wireshark
 
-a)...
-   > ...
+a) What device does Melkor use? (Format: string)
+   > Keyboard
+
+Dengan melihat detail di salah satu paket kita dapat mengetahui device yang digunakan
+<img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/430e481f-afcf-4c37-b609-b040ba3918f7" />
+
+b) What did Melkor write? (Format: string)
+   >
+Kita filter menggunakan `usb.transfer_type == 0x01` karena Keyboard adalah perangkat Human Interface Device (HID) dan transfer data utamanya (keypress yang sebenarnya) menggunakan Interrupt Transfer (Kode 0x01). Lalu save as plain text.
+
+<img width="1158" height="683" alt="image" src="https://github.com/user-attachments/assets/016cb36b-6b76-42f9-bd99-3dbfa13528ed" />
+
+Buat script menggunakan python sebagai alat Forensik Digital untuk menerjemahkan data hex dari log keylogger atau packet sniffer keyboard USB (dHID Report) menjadi teks yang dapat dibaca manusia.
+| Modul | Peran Kunci dalam Parsing |
+| :---: | :--- |
+| **`re` & `os`** | **Ekstraksi Data:** Bertugas membersihkan baris log yang berantakan dan secara akurat **menarik keluar** 8 byte payload HID dari setiap entry, serta mengelola file path dengan aman. |
+| **`binascii` & Maps** | **Dekode Karakter:** Menggunakan `binascii` untuk konversi angka hex dan dua peta (`KEY_MAP` dan `SHIFT_MAP`) berdasarkan standar **USB HID Usage Table** untuk menentukan karakter yang diketik. |
+
+
+
+
