@@ -3,15 +3,18 @@ apt install vsftpd -y
 apt install ftp -y
 
 groupadd ainur
-useradd -g ainur ainur 
+useradd -m -d /home/ainur -g ainur ainur 
 groupadd melkor
-useradd -g melkor melkor
+useradd -m -d /home/melkor -g melkor melkor 
 
 # 1. Direktori FTP
 mkdir -p /srv/ftp/shared
+
+chown root:root /srv/ftp
+chmod 755 /srv/ftp
+
 chown ainur:ainur /srv/ftp/shared
-chmod 755 /srv/ftp/shared
-# /srv/ftp/shared untuk Ainur read/write
+chmod 770 /srv/ftp/shared
 
 # 2. User Setup
 # Ainur (bisa read/write)
@@ -55,7 +58,7 @@ local_root=/srv/ftp
 
 # Melkor (`/etc/vsftpd_user_conf/melkor`)
 write_enable=NO
-local_root=/srv/ftp 
+local_root=/home/melkor
 
 # 5. File Bukti Akses Ainur
 echo "Ini bukti akses FTP Ainur" > /srv/ftp/shared/proof.txt
@@ -66,15 +69,18 @@ chmod 644 /srv/ftp/shared/proof.txt
 service vsftpd restart
 
 # Ainur
-ftp localhost
+ftp 10.88.1.1
+ls
+cd
 ls
 get proof.txt
 put proof.txt
 # Bisa read & write.
 
 # Melkor
-ftp localhost
-ls /srv/ftp/shared 
-get /srv/ftp/shared/proof.txt  
+ftp 10.88.1.1
+ls
+cd 
+get proof.txt  
 put proof.txt  
 # Bisa login tapi tidak bisa akses shared.
