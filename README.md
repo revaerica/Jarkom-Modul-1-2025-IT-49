@@ -149,11 +149,12 @@ a) What device does Melkor use? (Format: string)
    > Keyboard
 
 Dengan melihat detail di salah satu paket kita dapat mengetahui device yang digunakan
+
 <img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/430e481f-afcf-4c37-b609-b040ba3918f7" />
 
 b) What did Melkor write? (Format: string)
    > UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=
-> 
+
 Kita filter menggunakan `usb.transfer_type == 0x01` karena Keyboard adalah perangkat Human Interface Device (HID) dan transfer data utamanya (keypress yang sebenarnya) menggunakan Interrupt Transfer (Kode 0x01). Lalu save as plain text.
 
 <img width="1158" height="683" alt="image" src="https://github.com/user-attachments/assets/016cb36b-6b76-42f9-bd99-3dbfa13528ed" />
@@ -168,10 +169,13 @@ Buat script menggunakan python sebagai alat Forensik Digital untuk menerjemahkan
 
 c) What is Melkor's secret message? (Format: string)
    > Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd
+> 
 Dari yang kita dapat di poin b, kita dapat menggunakan tools cyberchef dan pilih From Base64
+
 <img width="1919" height="1106" alt="image" src="https://github.com/user-attachments/assets/46c0f011-d998-4b50-bce1-9520ff841df0" />
 
 kita dapatkan flag `KOMJAR25{K3yb0ard_W4rr10r_QFOao5QKO262iKo3G4LIVp0Sm}`
+
 <img width="1730" height="559" alt="image" src="https://github.com/user-attachments/assets/d9e18c0a-2393-437e-930c-c55b25ad1a9e" />
 
 ## Soal 16
