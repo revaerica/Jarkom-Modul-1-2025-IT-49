@@ -1,3 +1,6 @@
+apt update
+apt install vsftpd -y
+
 groupadd ainur
 useradd -g ainur ainur 
 groupadd melkor
