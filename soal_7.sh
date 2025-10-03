@@ -1,3 +1,8 @@
+groupadd ainur
+useradd -g ainur ainur 
+groupadd melkor
+useradd -g melkor melkor
+
 # 1. Direktori FTP
 mkdir -p /srv/ftp/shared
 chown ainur:ainur /srv/ftp/shared
