@@ -115,10 +115,19 @@ Melkor
 
 <img width="1377" height="662" alt="image" src="https://github.com/user-attachments/assets/064a95dd-9bba-480c-b564-1900af52953a" />
 
-
 <img width="1919" height="1251" alt="image" src="https://github.com/user-attachments/assets/60a7119a-b9d5-4ab5-99b6-5e990600b51b" />
 
 <img width="1182" height="675" alt="image" src="https://github.com/user-attachments/assets/7874c567-d0bb-4a98-bf09-74e4372d7bb6" />
+
+<img width="1919" height="1169" alt="image" src="https://github.com/user-attachments/assets/60cba103-dd66-49ac-b408-594e67e8f13a" />
+
+<img width="1919" height="1165" alt="image" src="https://github.com/user-attachments/assets/36742292-9f4d-4dab-99e6-74bf09b6753d" />
+
+<img width="1919" height="1245" alt="image" src="https://github.com/user-attachments/assets/eb862d9a-3d79-4243-b670-82a597c25036" />
+
+<img width="1919" height="1171" alt="image" src="https://github.com/user-attachments/assets/a4e7176e-81f4-4e8f-8593-a88945abc3db" />
+
+![Uploading image.png…]()
 
 ## Soal 9
 
