@@ -1,5 +1,6 @@
 apt update
 apt install vsftpd -y
+apt install ftp -y
 
 groupadd ainur
 useradd -g ainur ainur 
