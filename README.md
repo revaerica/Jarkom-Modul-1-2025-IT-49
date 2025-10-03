@@ -225,3 +225,42 @@ Dari yang kita dapat di poin b, kita dapat menggunakan tools cyberchef dan pilih
 kita dapatkan flag `KOMJAR25{K3yb0ard_W4rr10r_QFOao5QKO262iKo3G4LIVp0Sm}`
 
 <img width="1730" height="559" alt="image" src="https://github.com/user-attachments/assets/d9e18c0a-2393-437e-930c-c55b25ad1a9e" />
+
+## Soal 17
+a) What is the name of the first suspicious file?
+Format: file.exe
+
+
+> Invoice&MSO-Request.doc
+
+
+Untuk mencari file-nya, menggunakan display filter `http.request`
+<img width="1858" height="1168" alt="image" src="https://github.com/user-attachments/assets/abddb654-2b0e-4b8d-b7b3-23e2c5fcb960" />
+
+
+b) What is the name of the second suspicious file?
+Format: file.exe
+
+
+> knr.exe
+
+
+Dari poin a kita ketahui bahwa file kedua adalah knr.exe
+
+
+c) What is the hash of the second suspicious file (knr.exe)?
+Format: sha256
+
+
+> 749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18
+
+
+Untuk mengetahui hash dari file knr.exe, di wireshark file -> export object -> HTTP. Lalu save knr.exe
+<img width="1857" height="1169" alt="image" src="https://github.com/user-attachments/assets/1fb1a915-31ce-4b13-ac5c-a4e913d8b41d" />
+
+
+Lalu di terminal jalankan `sha256sum knr.exe`. Dan diketahui hash dari file knr.exe
+<img width="748" height="48" alt="image" src="https://github.com/user-attachments/assets/24e57fb6-751b-480c-af8a-d8e4cd90a99b" />
+
+
+Kita dapatkan flag `KOMJAR25{M4ster_4n4lyzer_cvvElWGMSzHKxew7Xnwydh5TS}`
