@@ -132,11 +132,20 @@ Melkor
 ## Soal 9
 <img width="803" height="287" alt="image" src="https://github.com/user-attachments/assets/a2024e9b-061b-45c6-8995-719e356a73ae" />
 
-<img width="1910" height="1002" alt="image" src="https://github.com/user-attachments/assets/b8bdc969-7cc3-4140-9fe5-aeccad2d20b1" />
+`ftp-data`
+<img width="1919" height="985" alt="image" src="https://github.com/user-attachments/assets/0240ad46-95b4-4877-abf1-39a98facc88b" />
 
-<img width="1919" height="892" alt="image" src="https://github.com/user-attachments/assets/7cc96fb5-524c-4df2-97f8-4300bcb8f6d9" />
+`ftp.request.command == "USER" or ftp.request.command == "PASS"`
+<img width="1919" height="891" alt="image" src="https://github.com/user-attachments/assets/056c991f-6034-4cd2-aa38-7b4b4db9ffee" />
 
-![Uploading image.png…]()
+`ftp.request.command == "USER" or ftp.request.command == "PASS"`
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/ec767fd3-7c47-41aa-b129-85e95bb71ee7" />
+
+`ftp.request.command == "STOR"`
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/8f446542-12fa-42f9-a9a7-089bad5984ea" />
+
+`ftp.response.code >= 500`
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/a3ad4792-20c8-4e51-8296-d81f83946505" />
 
 ## Soal 10
 
