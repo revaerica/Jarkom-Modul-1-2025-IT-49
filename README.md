@@ -105,8 +105,11 @@ Ubah konfigurasi vsftpd
 
 <img width="716" height="98" alt="image" src="https://github.com/user-attachments/assets/c30061d6-aef0-4129-974a-0a9eb6b993ee" />
 
-<img width="1723" height="96" alt="Screenshot 2025-10-01 120501" src="https://github.com/user-attachments/assets/c06e752f-bc59-4c1f-8239-198ec7d5a4ba" />
+Ainur
+<img width="1168" height="807" alt="image" src="https://github.com/user-attachments/assets/64cb9644-43e1-4b10-b52e-836b475ed15c" />
 
+Melkor
+<img width="1115" height="437" alt="image" src="https://github.com/user-attachments/assets/756790a9-cd0b-4a01-b84a-9733e575a768" />
 
 ## Soal 8
 
