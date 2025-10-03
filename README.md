@@ -113,3 +113,37 @@ Ubah konfigurasi vsftpd
 ## Soal 9
 
 ## Soal 10
+
+## Soal 14
+Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
+
+a) How many packets are recorded in the pcapng file? (Format: int)
+   > 500358
+
+<img width="959" height="490" alt="Screenshot 2025-10-01 214353" src="https://github.com/user-attachments/assets/fb161240-69cd-4926-a234-76598a0fda19" />
+
+b) What are the user that successfully logged in? (Format: user:pass)
+   > nlenna:y4v4nn4_k3m3nt4r1
+
+Menggunakan filter `http contain success` di Wireshark
+<img width="1919" height="900" alt="Screenshot 2025-10-01 215104" src="https://github.com/user-attachments/assets/1fbcf78c-4e91-4e9d-a8ec-ce232c2d6f25" />
+
+c) In which stream were the credentials found? (Format:int)
+   > 41824
+ 
+<img width="1036" height="549" alt="Screenshot 2025-10-01 215250" src="https://github.com/user-attachments/assets/d6af3d09-81b5-4144-99bd-6287db480097" />
+
+d) What tools are used for brute force? (Format: Hydra v1.8.0-dev)
+   > Fuzz Faster U Fool v2.1.0-dev
+
+<img width="1284" height="293" alt="image" src="https://github.com/user-attachments/assets/a3dceb4b-24e7-4e0d-831f-91a9bb7113e5" />
+
+flag `KOMJAR25{Brut3_F0rc3_gMmmf2sGnd9gbyg5zth5QYTqZ}`
+
+<img width="1774" height="934" alt="Screenshot 2025-10-01 215525" src="https://github.com/user-attachments/assets/89d849bc-4cd7-4a94-8832-4808d0f92df8" />
+
+## Soal 15
+Kita jalankan `nc 10.15.43.32 3402` dan buka file yang telah disediakan di Wireshark
+
+a)...
+   > ...
