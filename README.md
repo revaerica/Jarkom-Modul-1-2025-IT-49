@@ -151,20 +151,18 @@ Melkor
 `ping 10.88.1.1 -c 100`
 <img width="1016" height="518" alt="image" src="https://github.com/user-attachments/assets/dbc16a34-370d-4be5-824d-c00830bbcf6e" />
 
-## Analisis Uji Serangan Denial of Service (DoS) Sederhana
-
 Hasil *spam ping* yang dilakukan Melkor ke Server Eru menunjukkan bahwa **serangan sederhana ini tidak berhasil mengganggu kinerja atau stabilitas jaringan Eru** 
 | Metrik | Hasil | Status |
 | :---: | :---: | :--- |
 | **Packet Loss** | **0%** | **Stabil.** Semua 100 paket yang dikirim berhasil diterima kembali oleh Melkor. |
 | **RTT Rata-rata (Average)** | **0.328 ms** | **Sangat Cepat.** Waktu respons di bawah 1 milidetik menunjukkan Server Eru berhasil memproses semua *request* tambahan tanpa perlambatan yang terukur. |
 
-### Kesimpulan Dampak
-
 1.  **Stabilitas Jaringan:** Dengan **0% *packet loss***, dapat disimpulkan bahwa *buffer* jaringan Server Eru mampu menangani lonjakan 100 *request* ICMP secara instan tanpa kewalahan.
 2.  **Kinerja:** Nilai *Round Trip Time* (RTT) rata-rata yang sangat rendah (**0.328 ms**) adalah bukti bahwa *overhead* pemrosesan ICMP yang disebabkan oleh *spam ping* tersebut **tidak memengaruhi waktu respons** dasar Server Eru.
 
 Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan DoS berbasis *ping* sederhana ini.
+
+## Soal 11
 
 ## Soal 14
 Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
