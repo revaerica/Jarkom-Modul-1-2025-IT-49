@@ -51,11 +51,7 @@ local_root=/srv/ftp
 
 # Melkor (`/etc/vsftpd_user_conf/melkor`)
 write_enable=NO
-local_root=/home/melkor
-# Pastikan direktori /home/melkor ada:
-mkdir -p /home/melkor
-chown melkor:melkor /home/melkor
-chmod 700 /home/melkor
+local_root=/srv/ftp 
 
 # 5. File Bukti Akses Ainur
 echo "Ini bukti akses FTP Ainur" > /srv/ftp/shared/proof.txt
