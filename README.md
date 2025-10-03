@@ -162,8 +162,6 @@ Hasil *spam ping* yang dilakukan Melkor ke Server Eru menunjukkan bahwa **serang
 
 Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan DoS berbasis *ping* sederhana ini.
 
-## Soal 11
-
 ## Soal 14
 Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
 
@@ -227,5 +225,3 @@ Dari yang kita dapat di poin b, kita dapat menggunakan tools cyberchef dan pilih
 kita dapatkan flag `KOMJAR25{K3yb0ard_W4rr10r_QFOao5QKO262iKo3G4LIVp0Sm}`
 
 <img width="1730" height="559" alt="image" src="https://github.com/user-attachments/assets/d9e18c0a-2393-437e-930c-c55b25ad1a9e" />
-
-## Soal 16
