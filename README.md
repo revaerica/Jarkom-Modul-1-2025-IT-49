@@ -113,6 +113,13 @@ Melkor
 
 ## Soal 8
 
+<img width="1377" height="662" alt="image" src="https://github.com/user-attachments/assets/064a95dd-9bba-480c-b564-1900af52953a" />
+
+
+<img width="1919" height="1251" alt="image" src="https://github.com/user-attachments/assets/60a7119a-b9d5-4ab5-99b6-5e990600b51b" />
+
+<img width="1182" height="675" alt="image" src="https://github.com/user-attachments/assets/7874c567-d0bb-4a98-bf09-74e4372d7bb6" />
+
 ## Soal 9
 
 ## Soal 10
