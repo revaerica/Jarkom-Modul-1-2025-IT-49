@@ -43,6 +43,8 @@ user_config_dir=/etc/vsftpd_user_conf
 
 # 4. Per-User Config
 
+mkdir -p /etc/vsftpd_user_conf
+
 # Ainur (`/etc/vsftpd_user_conf/ainur`)
 write_enable=YES
 local_root=/srv/ftp
