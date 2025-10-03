@@ -103,7 +103,7 @@ Lalu kita filter dengan IP Manwe (10.88.1.3) dan IP Eru (10.88.1.1) dan export f
 
 Ubah konfigurasi vsftpd
 
-<img width="716" height="98" alt="image" src="https://github.com/user-attachments/assets/c30061d6-aef0-4129-974a-0a9eb6b993ee" />
+<img width="1919" height="1240" alt="image" src="https://github.com/user-attachments/assets/990d80f7-a723-4799-8755-5aa966f09274" />
 
 Ainur
 <img width="1168" height="807" alt="image" src="https://github.com/user-attachments/assets/64cb9644-43e1-4b10-b52e-836b475ed15c" />
