@@ -127,9 +127,12 @@ Melkor
 
 <img width="1919" height="1171" alt="image" src="https://github.com/user-attachments/assets/a4e7176e-81f4-4e8f-8593-a88945abc3db" />
 
-![Uploading image.png…]()
+<img width="1379" height="1228" alt="image" src="https://github.com/user-attachments/assets/d8365dc5-5d89-411f-90e6-a81aec66c1e1" />
 
 ## Soal 9
+<img width="803" height="287" alt="image" src="https://github.com/user-attachments/assets/a2024e9b-061b-45c6-8995-719e356a73ae" />
+
+![Uploading image.png…]()
 
 ## Soal 10
 
