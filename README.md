@@ -162,6 +162,15 @@ Hasil *spam ping* yang dilakukan Melkor ke Server Eru menunjukkan bahwa **serang
 
 Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan DoS berbasis *ping* sederhana ini.
 
+## Soal 11
+<img width="603" height="379" alt="image" src="https://github.com/user-attachments/assets/85e8e925-37d9-49ca-969d-4fb0e3cfc265" />
+
+<img width="487" height="245" alt="image" src="https://github.com/user-attachments/assets/b76c0969-bbf1-45f0-a9a6-03e0c0a02159" />
+
+## Soal 12
+
+## Sosl 13
+
 ## Soal 14
 Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
 
@@ -226,6 +235,8 @@ kita dapatkan flag `KOMJAR25{K3yb0ard_W4rr10r_QFOao5QKO262iKo3G4LIVp0Sm}`
 
 <img width="1730" height="559" alt="image" src="https://github.com/user-attachments/assets/d9e18c0a-2393-437e-930c-c55b25ad1a9e" />
 
+## Soal 16
+
 ## Soal 17
 a) What is the name of the first suspicious file?
 Format: file.exe
@@ -264,3 +275,9 @@ Lalu di terminal jalankan `sha256sum knr.exe`. Dan diketahui hash dari file knr.
 
 
 Kita dapatkan flag `KOMJAR25{M4ster_4n4lyzer_cvvElWGMSzHKxew7Xnwydh5TS}`
+
+## Soal 18
+
+## Soal 19
+
+## Soal 20
