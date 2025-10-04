@@ -176,6 +176,10 @@ Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan D
 
 ## Sosl 13
 
+<img width="1030" height="657" alt="image" src="https://github.com/user-attachments/assets/cc38ab93-7b97-4c2d-847b-b96426b8ea84" />
+
+<img width="1099" height="392" alt="image" src="https://github.com/user-attachments/assets/42d5afeb-842f-42db-bc1f-48be5d693218" />
+
 ## Soal 14
 Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
 
