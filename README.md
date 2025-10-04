@@ -180,6 +180,10 @@ Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan D
 
 <img width="1099" height="392" alt="image" src="https://github.com/user-attachments/assets/42d5afeb-842f-42db-bc1f-48be5d693218" />
 
+<img width="1919" height="928" alt="image" src="https://github.com/user-attachments/assets/c3d8a34a-414b-44bf-90d7-02a1bf3b60b4" />
+
+Darisini dapat kita lihat bahwa semua paket terenkripsi, password dan username tidak terlihat, 
+
 ## Soal 14
 Kita jalankan `nc 10.15.43.32 3401` dan buka file yang telah disediakan di Wireshark
 
