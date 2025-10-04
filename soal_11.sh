@@ -14,7 +14,8 @@ ss -tuln | grep :23
 
 # Di Eru
 apt-get update
-apt-get install -y telnet netcat
+apt-get install -y telnet 
+pt install netcat-traditional -y
 
 telnet 10.88.1.2 
 
