@@ -163,11 +163,16 @@ Hasil *spam ping* yang dilakukan Melkor ke Server Eru menunjukkan bahwa **serang
 Secara keseluruhan, Server Eru terbukti **tangguh** terhadap simulasi serangan DoS berbasis *ping* sederhana ini.
 
 ## Soal 11
+
 <img width="603" height="379" alt="image" src="https://github.com/user-attachments/assets/85e8e925-37d9-49ca-969d-4fb0e3cfc265" />
 
 <img width="487" height="245" alt="image" src="https://github.com/user-attachments/assets/b76c0969-bbf1-45f0-a9a6-03e0c0a02159" />
 
 ## Soal 12
+
+<img width="668" height="380" alt="image" src="https://github.com/user-attachments/assets/6b380038-7c7c-4e45-8d72-5d153fe257b7" />
+
+<img width="487" height="193" alt="image" src="https://github.com/user-attachments/assets/9e35c9d9-dee9-4c66-8577-06f48902c27e" />
 
 ## Sosl 13
 
