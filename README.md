@@ -222,12 +222,6 @@ ftp> put mendung.jpg
 `ftp.response.code >= 500`
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/a3ad4792-20c8-4e51-8296-d81f83946505" />
 
-# Demonstrasi Kelemahan Protokol FTP – Studi Kasus "Kitab Penciptaan"
-
-Dokumen ini menjelaskan langkah-langkah konfigurasi dan pengujian kelemahan **protokol FTP (File Transfer Protocol)**, di mana data seperti **username, password, dan isi file** dapat terlihat secara **plain text** menggunakan Wireshark.
-
----
-
 ```
 apt update
 apt install wget
