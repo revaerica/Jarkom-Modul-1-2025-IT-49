@@ -111,15 +111,79 @@ Ainur
 Melkor
 <img width="1115" height="437" alt="image" src="https://github.com/user-attachments/assets/756790a9-cd0b-4a01-b84a-9733e575a768" />
 
+```
+apt update
+apt install vsftpd -y
+apt install ftp -y
+```
+Melakukan update repository dan menginstal paket
+- vsftpd → server FTP.
+- ftp → client FTP untuk melakukan koneksi.
+
+```
+groupadd ainur
+useradd -m -d /home/ainur -g ainur ainur 
+groupadd melkor
+useradd -m -d /home/melkor -g melkor melkor 
+```
+- User Ainur → memiliki home directory /home/ainur dan tergabung dalam grup ainur.
+- User Melkor → memiliki home directory /home/melkor dan tergabung dalam grup melkor.
+
+```
+mkdir -p /srv/ftp/shared
+
+chown root:root /srv/ftp
+chmod 755 /srv/ftp
+
+chown ainur:ainur /srv/ftp/shared
+chmod 770 /srv/ftp/shared
+```
+Membuat direktori FTP
+- `/srv/ftp` adalah direktori utama FTP.
+- `/srv/ftp/shared` adalah direktori berbagi file antar pengguna.
+Hak akses
+- `/srv/ftp` hanya bisa ditulis oleh root (755).
+- `/srv/ftp/shared` bisa diakses penuh oleh Ainur (770).
+
+Konfigurasi utama FTP
+- `anonymous_enable=NO` → menonaktifkan login anonim.
+- `local_enable=YES` → hanya user lokal yang boleh login.
+- `write_enable=YES` → mengizinkan user menulis file.
+- `ssl_enable=NO` → menonaktifkan enkripsi, agar data login bisa dilihat sebagai plain text di Wireshark.
+- `user_config_dir` → memungkinkan pengaturan per-user di folder /etc/vsftpd_user_conf.
+
+```
+echo "Ini bukti akses FTP Ainur" > /srv/ftp/shared/proof.txt
+chown ainur:ainur /srv/ftp/shared/proof.txt
+chmod 644 /srv/ftp/shared/proof.txt
+```
+Membuat file bukti (proof.txt) di folder shared.
+File ini akan digunakan oleh Ainur untuk diuji akses baca/tulis melalui FTP.
+
+`service vsftpd restart` >> Me-restart layanan FTP agar semua perubahan konfigurasi diterapkan.
+`ftp 10.88.1.1` >> Melakukan koneksi ke server FTP dengan IP 10.88.1.1.
+
 ## Soal 8
 
 <img width="1377" height="662" alt="image" src="https://github.com/user-attachments/assets/064a95dd-9bba-480c-b564-1900af52953a" />
+
+- `apt update` : Memperbarui daftar paket dari repository.
+- `apt install wget` : Menginstal tool untuk mengunduh file dari internet.
+- `apt install unzip -y` : Menginstal tool untuk mengekstrak file ZIP.
+- `apt install vsftpd -y` : Menginstal server FTP (Very Secure FTP Daemon).
+- `apt install ftp -y` : Menginstal client FTP untuk melakukan koneksi ke server FTP.
+
+- `wget ...` : Mengunduh file cuaca.zip dari link Google Drive.
+- `--no-check-certificate` digunakan agar download tetap jalan meskipun sertifikat HTTPS tidak valid.
+- `unzip cuaca.zip` : Mengekstrak file yang sudah diunduh agar file cuaca.txt dan mendung.jpg bisa diakses.
 
 <img width="1919" height="1251" alt="image" src="https://github.com/user-attachments/assets/60a7119a-b9d5-4ab5-99b6-5e990600b51b" />
 
 <img width="1182" height="675" alt="image" src="https://github.com/user-attachments/assets/7874c567-d0bb-4a98-bf09-74e4372d7bb6" />
 
 <img width="1919" height="1169" alt="image" src="https://github.com/user-attachments/assets/60cba103-dd66-49ac-b408-594e67e8f13a" />
+
+Menggunakan filter `ftp` agar hanya paket FTP yang terlihat, termasuk username dan password yang akan dikirim secara plain text.
 
 <img width="1919" height="1165" alt="image" src="https://github.com/user-attachments/assets/36742292-9f4d-4dab-99e6-74bf09b6753d" />
 
@@ -128,6 +192,17 @@ Melkor
 <img width="1919" height="1171" alt="image" src="https://github.com/user-attachments/assets/a4e7176e-81f4-4e8f-8593-a88945abc3db" />
 
 <img width="1379" height="1228" alt="image" src="https://github.com/user-attachments/assets/d8365dc5-5d89-411f-90e6-a81aec66c1e1" />
+
+```
+ftp 10.88.2.1
+ftp> cd shared
+ftp> put cuaca.txt
+ftp> put mendung.jpg
+```
+- `ftp 10.88.2.1` : Menghubungkan client FTP (Eru) ke server FTP (Melkor) melalui IP 10.88.2.1.
+- `cd shared` : Masuk ke folder shared di dalam direktori server.
+- `put cuaca.txt` : Mengunggah file cuaca.txt ke server Melkor.
+- `put mendung.jpg` : Mengunggah file mendung.jpg ke server Melkor.
 
 ## Soal 9
 <img width="803" height="287" alt="image" src="https://github.com/user-attachments/assets/a2024e9b-061b-45c6-8995-719e356a73ae" />
@@ -146,6 +221,92 @@ Melkor
 
 `ftp.response.code >= 500`
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/a3ad4792-20c8-4e51-8296-d81f83946505" />
+
+# Demonstrasi Kelemahan Protokol FTP – Studi Kasus "Kitab Penciptaan"
+
+Dokumen ini menjelaskan langkah-langkah konfigurasi dan pengujian kelemahan **protokol FTP (File Transfer Protocol)**, di mana data seperti **username, password, dan isi file** dapat terlihat secara **plain text** menggunakan Wireshark.
+
+---
+
+```
+apt update
+apt install wget
+apt install unzip -y 
+apt install vsftpd -y
+apt install ftp -y
+```
+- `apt update` → memperbarui daftar paket di sistem agar versi terbaru bisa diinstal.
+- `apt install wget` → menginstal tool untuk mengunduh file dari internet.
+- `apt install unzip -y` → menginstal tool untuk mengekstrak file `.zip`.
+- `apt install vsftpd -y` → menginstal **Very Secure FTP Daemon** (server FTP).
+- `apt install ftp -y` → menginstal **FTP client** agar bisa melakukan koneksi ke server FTP.
+
+```
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=11ua2KgBu3MnHEIjhBnzqqv2RMEiJsILY' -O kitab_penciptaan.zip
+unzip kitab_penciptaan.zip
+```
+- `wget` digunakan untuk mengunduh file `kitab_penciptaan.zip` dari Google Drive.
+- Opsi `--no-check-certificate` digunakan untuk menghindari error jika sertifikat HTTPS tidak valid.
+- `unzip kitab_penciptaan.zip` mengekstrak file `.zip` agar file teks `kitab_penciptaan.txt` bisa diakses.
+
+```
+mv kitab_penciptaan.txt /srv/ftp/shared/
+chown ainur:ainur /srv/ftp/shared/kitab_penciptaan.txt
+chmod 644 /srv/ftp/shared/kitab_penciptaan.txt 
+```
+- `mv` → memindahkan file hasil ekstraksi ke direktori FTP yang dapat diakses client.
+- `chown` → mengubah kepemilikan file ke user `ainur` (agar bisa diakses melalui FTP).
+- `chmod 644` → memberi hak akses read untuk semua user, dan write hanya untuk pemilik (`ainur`).
+
+```
+nano /etc/vsftpd_user_conf/ainur
+```
+Isi file konfigurasi
+```
+write_enable=NO
+local_root=/srv/ftp
+```
+- File ini adalah **konfigurasi khusus untuk user `ainur`**.
+- `write_enable=NO` → mencegah user `ainur` mengunggah (upload) file ke server.
+- `local_root=/srv/ftp` → mengatur agar direktori root FTP `ainur` berada di `/srv/ftp`, sehingga ia langsung melihat folder `shared` setelah login.
+
+```
+service vsftpd restart
+```
+Perintah ini menjalankan ulang layanan FTP agar perubahan konfigurasi di `/etc/vsftpd_user_conf/ainur` diterapkan.
+
+```
+ping 10.88.1.1 
+```
+Digunakan untuk memastikan konektivitas antara node **Manwe (client)** dan **node Ainur (server FTP)**.
+
+```
+ftp 10.88.1.1 
+ftp> ls
+ftp> cd shared
+ftp> ls
+ftp> get kitab_penciptaan.txt
+```
+- `ftp 10.88.1.1` → menghubungkan Manwe ke server FTP Ainur melalui alamat IP `10.88.1.1`.
+- `ls` → menampilkan isi direktori.
+- `cd shared` → berpindah ke direktori `shared` tempat file uji disimpan.
+- `get kitab_penciptaan.txt` → mengunduh file dari server ke client.
+
+```
+ls -lh kitab_penciptaan.txt
+cat kitab_penciptaan.txt
+```
+- `ls -lh` → memastikan file berhasil diunduh dan melihat ukuran serta hak aksesnya.
+- `cat` → menampilkan isi file `kitab_penciptaan.txt` di terminal.
+
+Buka Wireshark dan hentikan proses capture.  
+Kemudian cari paket **FTP Request** dan lihat pada bagian detail.
+```
+USER ainur
+PASS <password>
+```
+Semua kredensial FTP, termasuk **username** dan **password**, terlihat dalam bentuk **plain text**, tanpa enkripsi.  
+Selain itu, isi file yang ditransfer (`kitab_penciptaan.txt`) juga dapat dibaca langsung pada paket data.
 
 ## Soal 10
 `ping 10.88.1.1 -c 100`
