@@ -292,5 +292,19 @@ Kita dapatkan flag `KOMJAR25{M4ster_4n4lyzer_cvvElWGMSzHKxew7Xnwydh5TS}`
 ## Soal 18
 
 ## Soal 19
+a) Who sent the threatening message? (Format: string (name))
+   > Your Life
+
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/57bd5679-777a-44f2-88a8-630a8c2c74b3" />
+
+b) How much ransom did the attacker demand ($)? (Format:int)
+   > 1600
+
+c) What is the attacker's bitcoin wallet? (Format: string)
+   > 1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3UyL
+
+<img width="1395" height="512" alt="image" src="https://github.com/user-attachments/assets/05667b07-4496-42f5-acbf-217f3ff589da" />
+
+Congratulations! Here is your flag: `KOMJAR25{Y0u_4re_J4rk0m_G0d_6nwzcWmjktZz1mBra7RzvhNsc}`
 
 ## Soal 20
