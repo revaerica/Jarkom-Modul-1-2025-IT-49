@@ -1,6 +1,7 @@
 # Di Melkor
-apt-get update
-apt-get install -y telnetd inetutils-telnetd openbsd-inetd
+apt update
+apt-get purge -y xinetd
+apt-get install -y telnetd inetutils-telnetd openbsd-inetd nano
 
 useradd -m -d /home/test -s /bin/bash test
 echo "test:test123" | chpasswd
