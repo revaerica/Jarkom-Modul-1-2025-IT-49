@@ -458,6 +458,8 @@ b) How much ransom did the attacker demand ($)? (Format:int)
 c) What is the attacker's bitcoin wallet? (Format: string)
    > 1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3UyL
 
+ <img width="1288" height="1236" alt="Screenshot 2025-10-04 234832" src="https://github.com/user-attachments/assets/5d76b878-2e09-44b6-a76c-245cb456b843" />
+
 <img width="1395" height="512" alt="image" src="https://github.com/user-attachments/assets/05667b07-4496-42f5-acbf-217f3ff589da" />
 
 Congratulations! Here is your flag: `KOMJAR25{Y0u_4re_J4rk0m_G0d_6nwzcWmjktZz1mBra7RzvhNsc}`
